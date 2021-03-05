@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -11,8 +10,12 @@ export default function Hero() {
         We know how large objects will act, <br /> but things on a small scale.
       </h4>
       <div className='hero__cta flex'>
-        <a className='button'>Get Quote Now</a>
-        <a className='button'>Learn More</a>
+        <Link href='/contact'>
+          <a className='button'>Get Quote Now</a>
+        </Link>
+        <Link href='/about'>
+          <a className='button'>Learn More</a>
+        </Link>
       </div>
       <div className='hero__cards-grid'>
         <div className='hero-card flex flex-fd-c pall-2'>
