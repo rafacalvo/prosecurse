@@ -1,0 +1,162 @@
+.contact {
+  text-align: center;
+  padding: 3.5rem 0;
+
+  @include breakpoint-down(medium) {
+    padding-top: 10rem;
+    height: 100%;
+  }
+
+  @include breakpoint-down(small) {
+    padding-top: 47rem;
+    height: 100%;
+  }
+
+  h2 {
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  p {
+    margin: 0.5rem 0 3rem 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    @include breakpoint-down(medium) {
+      grid-template-columns: 1fr;
+      gap: 2.25rem;
+    }
+
+    .contact-cards {
+      svg {
+        margin-bottom: 1rem;
+      }
+
+      h5 {
+        margin-top: 1.5rem;
+      }
+
+      .button {
+        background: none;
+        border: 1px solid $primaryColor;
+        color: $primaryColor;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $primaryColor;
+          color: $white;
+        }
+      }
+    }
+
+    .location-card,
+    .phone-card,
+    .mail-card {
+      @include breakpoint-down(medium) {
+        width: 100%;
+      }
+    }
+
+    .location-card {
+      background-color: $darkBgColor;
+      position: relative;
+      height: 393px;
+      width: 329px;
+      align-items: center;
+      padding: 5rem 3.6875rem;
+      h5,
+      h6 {
+        color: $white;
+      }
+    }
+
+    .phone-card,
+    .mail-card {
+      background-color: $white;
+      height: 333px;
+      width: 327px;
+      padding: 3.125rem 3.6875rem;
+    }
+
+    .phone-card {
+      justify-self: end;
+
+      h5 {
+        margin-bottom: 0.75rem;
+      }
+
+      .button {
+        margin-top: 0.25rem;
+      }
+    }
+
+    .mail-card {
+      justify-self: start;
+    }
+  }
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 800px;
+  padding: 2rem;
+  margin-bottom: 3.5rem;
+
+  .form-name {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+
+  @include breakpoint-down(medium) {
+    width: 650px;
+  }
+
+  @include breakpoint-down(small) {
+    padding: 2rem;
+    width: 300px;
+
+    .form-name {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+  }
+
+  /* Style inputs with type="text", select elements and textareas */
+  input[type='text'],
+  textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  /* Style the submit button with a specific background color etc */
+  button {
+    background-color: $secondaryColor2;
+    border: 1px solid $secondaryColor2;
+    color: $white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+  }
+
+  /* When moving the mouse over the submit button, add a darker green color */
+  button:hover {
+    background: none;
+    border: 1px solid $secondaryColor2;
+    color: $secondaryColor2;
+  }
+}

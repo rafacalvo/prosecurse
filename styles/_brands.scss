@@ -1,0 +1,92 @@
+.subscription {
+  height: 338px;
+  border-bottom: 50px blue;
+
+  .brands-grid {
+    max-width: 69.375rem;
+    margin: 2.5rem auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    @include breakpoint-down(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint-down(small) {
+      grid-template-columns: 1fr;
+    }
+
+    i {
+      font-size: 4.5rem;
+      color: $secondTextColor;
+      text-align: center;
+
+      @include breakpoint-down(medium) {
+        font-size: 6rem;
+      }
+    }
+  }
+
+  .bottom-border {
+    width: 100%;
+    height: 77px;
+    background-color: $darkBgColor;
+
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+  }
+}
+
+.newsletter {
+  background: linear-gradient(
+    -90deg,
+    rgba(41, 92, 122, 1),
+    rgba(0, 114, 181, 1)
+  );
+  border-radius: 2px;
+  justify-content: space-between;
+  padding: 33px 53px;
+  position: relative;
+  top: 15%;
+
+  h3 {
+    color: $white;
+    @include breakpoint-down(small) {
+      text-align: center;
+    }
+  }
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+  }
+
+  input[type='email'] {
+    padding: 0.875rem 1.5rem;
+    width: 333px;
+    border: 2px solid $white;
+    border-radius: 5px 0 0 5px;
+
+    @include breakpoint-down(medium) {
+      width: 200px;
+    }
+  }
+
+  button[type='submit'] {
+    background-color: $primaryColor;
+    border: 1px solid $white;
+    border-radius: 0 5px 5px 0;
+    color: $lightTextColor;
+    font-weight: 600;
+    font-size: $font-sm;
+    letter-spacing: 1px;
+    transition: background-color 300ms ease-in-out, border 300ms ease-in-out;
+
+    @include breakpoint-down(medium) {
+      padding: 0.875rem 1.5rem;
+    }
+  }
+}

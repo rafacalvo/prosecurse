@@ -1,0 +1,79 @@
+.nav {
+  background: none;
+  color: $secondTextColor;
+
+  a {
+    margin: auto 0;
+    font-size: $font-sm;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .logo {
+    font-size: $font-lg;
+    font-weight: bold;
+    font-family: 'Martel';
+    color: $textColor;
+  }
+
+  &__desktop {
+    height: 5rem;
+
+    .desk-links,
+    .desk-social {
+      a:hover,
+      svg:hover {
+        color: $secondaryColor4;
+        transition: ease 0.5s;
+      }
+    }
+
+    .desk-links {
+      a:first-child,
+      a:nth-child(2),
+      a:nth-child(3) {
+        margin: 0 3rem 0 0;
+      }
+    }
+  }
+
+  &__mobile {
+    padding: 2rem;
+
+    a {
+      margin: 0;
+    }
+  }
+}
+
+.topnav {
+  position: absolute;
+  top: -100%;
+  z-index: 3;
+  background-color: #f3f3f3;
+  height: 400px;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  transition: top ease 500ms;
+
+  @include breakpoint-down(medium) {
+    a {
+      text-align: center;
+      margin: 1rem 0;
+    }
+  }
+
+  a {
+    text-align: center;
+  }
+
+  .mobile-header {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+
+    a {
+      margin: 0;
+    }
+  }
+}
