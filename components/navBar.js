@@ -77,13 +77,13 @@ export default function NavBar() {
           <Link href='/'>
             <a onClick={closeNav}>Home </a>
           </Link>
-          <Link href='/'>
+          <Link href='/about'>
             <a onClick={closeNav}>About </a>
           </Link>
-          <Link href='/'>
+          <Link href='/team'>
             <a onClick={closeNav}>Team </a>
           </Link>
-          <Link href='/'>
+          <Link href='/contact'>
             <a onClick={closeNav}>Contact </a>
           </Link>
         </div>
